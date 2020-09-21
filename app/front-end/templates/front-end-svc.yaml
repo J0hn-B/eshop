@@ -6,7 +6,7 @@ metadata:
   labels:
     name: front-end
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8079
