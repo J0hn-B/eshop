@@ -15,3 +15,6 @@ spec:
     path: app/rabbitmq
     repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
