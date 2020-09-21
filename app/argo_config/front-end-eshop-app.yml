@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: front-end
+  namespace: argocd
+spec:
+  destination:
+    namespace: eshop
+    server: https://kubernetes.default.svc
+  project: eshop
+  source:
+    helm:
+      valueFiles:
+        - values.yaml
+    path: app/front-end
+    repoURL: https://github.com/J0hn-B/eshop.git
+    targetRevision: HEAD

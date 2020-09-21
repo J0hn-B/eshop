@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eshop
+  name: rabbitmq
   namespace: argocd
 spec:
   destination:
@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-    path: app/eshop
+    path: app/rabbitmq
     repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
