@@ -2,36 +2,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: carts
+  name: user
   labels:
-    name: carts
+    name: user
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: carts
+      name: user
   template:
     metadata:
       labels:
-        name: carts
+        name: user
     spec:
       containers:
-      - name: carts
-        image: weaveworksdemos/carts:0.4.8
-        env:
-         - name: ZIPKIN
-           value: zipkin.jaeger.svc.cluster.local
-         - name: JAVA_OPTS
-           value: -Xms64m -Xmx128m -XX:PermSize=32m -XX:MaxPermSize=64m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom
+      - name: user
+        image: weaveworksdemos/user:0.4.7
         resources:
           limits:
             cpu: 300m
-            memory: 500Mi
+            memory: 100Mi
           requests:
-            cpu: 300m
-            memory: 500Mi
+            cpu: 100m
+            memory: 100Mi
         ports:
         - containerPort: 80
+        env:
+        - name: MONGO_HOST
+          value: user-db:27017
         securityContext:
           runAsNonRoot: true
           runAsUser: 10001
@@ -41,9 +39,6 @@ spec:
             add:
               - NET_BIND_SERVICE
           readOnlyRootFilesystem: true
-        volumeMounts:
-        - mountPath: /tmp
-          name: tmp-volume
         livenessProbe:
           httpGet:
             path: /health
@@ -56,9 +51,5 @@ spec:
             port: 80
           initialDelaySeconds: 180
           periodSeconds: 3
-      volumes:
-        - name: tmp-volume
-          emptyDir:
-            medium: Memory
       nodeSelector:
         beta.kubernetes.io/os: linux

@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: carts
+  name: orders
   labels:
-    name: carts
+    name: orders
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: carts
+      name: orders
   template:
     metadata:
       labels:
-        name: carts
+        name: orders
     spec:
       containers:
-      - name: carts
-        image: weaveworksdemos/carts:0.4.8
+      - name: orders
+        image: weaveworksdemos/orders:0.4.7
         env:
          - name: ZIPKIN
            value: zipkin.jaeger.svc.cluster.local
@@ -25,10 +25,10 @@ spec:
            value: -Xms64m -Xmx128m -XX:PermSize=32m -XX:MaxPermSize=64m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom
         resources:
           limits:
-            cpu: 300m
+            cpu: 500m
             memory: 500Mi
           requests:
-            cpu: 300m
+            cpu: 200m
             memory: 500Mi
         ports:
         - containerPort: 80

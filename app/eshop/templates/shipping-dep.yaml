@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: carts
+  name: shipping
   labels:
-    name: carts
+    name: shipping
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: carts
+      name: shipping
   template:
     metadata:
       labels:
-        name: carts
+        name: shipping
     spec:
       containers:
-      - name: carts
-        image: weaveworksdemos/carts:0.4.8
+      - name: shipping
+        image: weaveworksdemos/shipping:0.4.8
         env:
          - name: ZIPKIN
            value: zipkin.jaeger.svc.cluster.local

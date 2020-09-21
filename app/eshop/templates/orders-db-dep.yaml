@@ -1,22 +1,22 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: eshop
-  name: carts-db
+  name: orders-db
   labels:
-    name: carts-db
+    name: orders-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: carts-db
+      name: orders-db
   template:
     metadata:
       labels:
-        name: carts-db
+        name: orders-db
     spec:
       containers:
-      - name: carts-db
+      - name: orders-db
         image: mongo
         ports:
         - name: mongo
