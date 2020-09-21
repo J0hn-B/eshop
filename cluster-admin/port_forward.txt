@@ -1,0 +1,9 @@
+
+# port-forward ArgoCD
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+# port-forward Grafana
+kubectl port-forward svc/prometheus-grafana  -n prometheus 3000:80
+
+# get Grafana secret
+ kubectl get secret  prometheus-grafana -n prometheus -o jsonpath="{.data.admin-password}" | base64 --decode
