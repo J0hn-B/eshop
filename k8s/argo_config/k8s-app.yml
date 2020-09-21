@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-    path: k8s-config
-    repoURL: https://github.com/J0hn-B/k8s-prep.git
+    path: k8s/k8s-configuration
+    repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD

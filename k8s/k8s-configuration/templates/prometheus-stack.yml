@@ -15,8 +15,8 @@ spec:
         value: Ignore
       valueFiles:
       - values.yaml
-    path: k8s/kube-prometheus-stack
-    repoURL: https://github.com/J0hn-B/k8s-prep.git
+    path: k8s/k8s-charts/metrics-server
+    repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
   syncPolicy:
     automated:

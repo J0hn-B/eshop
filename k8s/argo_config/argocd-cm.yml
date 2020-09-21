@@ -9,4 +9,4 @@ metadata:
 data:
   admin.enabled: "true"
   repositories: |
-    - url: https://github.com/J0hn-B/k8s-prep.git
+    - url: https://github.com/J0hn-B/eshop.git

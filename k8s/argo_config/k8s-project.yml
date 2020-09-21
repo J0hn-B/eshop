@@ -15,5 +15,5 @@ spec:
     - group: "*"
       kind: "*"
   sourceRepos:
-    - https://github.com/J0hn-B/k8s-prep.git
+    - https://github.com/J0hn-B/eshop.git
     - "*"
