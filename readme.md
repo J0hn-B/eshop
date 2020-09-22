@@ -11,14 +11,14 @@ Folders:
 1) **app:**  
     - **argo_config:**  ArgoCD manifests for the application and the project. From inside app/ folder:  
       `kubectl apply -f argocd_config`
-    - **eshop:**  [Helm chart]. This will install all the application's Helm charts. App of apps aproach, as described in ArgoCD documentation.
+    - **eshop:**  *[Helm chart]*. This will install all the application's Helm charts. App of apps aproach, as described in ArgoCD documentation.
 
 2) **k8s:**  
     - **argo_config:** ArgoCD manifests for the cluster management application and the project. From inside k8s/ folder:  
      `kubectl apply -f argocd_config`
     - **k8s-charts:** Helm charts related only to the K8s cluster management (ex: Prometheus).  
         `cd k8s-charts` --> `helm pull prometheus-community/kube-prometheus-stack --untar` --> modify values.yaml
-    - **k8s-configuration:**  [Helm chart]. This will install all the Helm charts inside k8s-charts folder. App of apps aproach, as described in ArgoCD documentation.
+    - **k8s-configuration:**  *[Helm chart]*. This will install all the Helm charts inside k8s-charts folder. App of apps aproach, as described in ArgoCD documentation.
 
 3) **scripts:**  
     - scripts for initial configuration (ex: install argocd)
