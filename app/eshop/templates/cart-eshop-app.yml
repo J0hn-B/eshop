@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-    path: app/carts
+    path: services/carts
     repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
   syncPolicy:

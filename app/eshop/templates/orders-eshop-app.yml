@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-    path: app/orders
+    path: services/orders
     repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
   syncPolicy:
