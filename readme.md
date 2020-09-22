@@ -39,4 +39,4 @@ Folders:
 From a second terminal: `cd /eshop/k8s` --> `kubectl apply -f argo_config`
 
 Check your ArgoCD web UI, click **sync** in the k8s-cluster-management application (you may need to refresh your browser)  
-    - metrics-server must be healthy-synced, k8s-cluster-management must be healthy-synced. Prometheus must be **healthy-OutOfSync**. Click **sync**
+    **metrics-server** must be healthy-synced, **k8s-cluster-management** must be healthy-synced. Prometheus must be **healthy-OutOfSync**. Click **sync**
