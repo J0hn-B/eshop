@@ -51,5 +51,5 @@ metrics-server.yml and prometheus-stack.yml used to deploy the charts from k8s-c
 
 ## How to:  Application Deployment
 
-`cd ~/eshop/app` --> `kubectl apply -f argo_config`
+`cd ~/eshop/app` --> `kubectl apply -f argo_config`  
 Check your ArgoCD web UI, click **sync** in the **app-eshop** application (you may need to refresh your browser)
