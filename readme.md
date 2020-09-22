@@ -1,6 +1,6 @@
 # Kubernetes sample application with ArgoCD
 
-The app: <https://microservices-demo.github.io/>
+The app: <https://microservices-demo.github.io/>  
 Tested with Kind, an average of 16Gb of RAM required.
 
 Architecture explained:  
