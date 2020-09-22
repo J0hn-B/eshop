@@ -27,3 +27,11 @@ Folders:
 
 4) **services:**  
     - Application Helm charts.
+
+## How to  
+
+`git clone https://github.com/J0hn-B/eshop.git`
+
+`kind create cluster`
+
+`cd /eshop/scripts` --> `./install_argocd.sh`
