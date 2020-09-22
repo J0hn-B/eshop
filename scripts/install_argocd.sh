@@ -9,12 +9,13 @@ NC='\033[0m'
 kubectl create namespace argocd;
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml;
 
-echo -e "${LBLUE}Waiting for ArgoCD installation,...... :)${NC}\n"
-kubectl wait --for=condition=Available --timeout=180s deploy/argocd-server -n argocd
+echo -e "${LBLUE}Waiting for ArgoCD installation ...... :)${NC}\n"
+kubectl wait --for=condition=Available --timeout=360s deploy/argocd-server -n argocd
 echo -e "${GREEN}ArgoCD is ready! Enjoy ;))${NC}\n"
 
 PASS=$(kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2)
 
+echo -e "${CYAN}--> This is your username:${NC}${GREEN} admin${NC}\n"
 echo -e "${CYAN}--> This is your password:${NC}${GREEN} ${PASS}${NC}\n"
 
 
