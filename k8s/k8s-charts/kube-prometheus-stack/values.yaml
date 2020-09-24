@@ -47,7 +47,7 @@ defaultRules:
     kubernetesStorage: true
     kubernetesSystem: true
     kubeScheduler: true
-    kubeStateMetrics: true
+    kubeStateMetrics: false
     network: true
     node: true
     prometheus: true
