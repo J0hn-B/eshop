@@ -1,0 +1,35 @@
+{
+  "todo": [
+    {
+      "assignedTo": {
+        "name": "J0hn-B"
+      },
+      "category": "Services",
+      "creation_time": "2020-09-24T10:02:59.795Z",
+      "description": {
+        "content": "Add Horizontal Pod Autoscaller manifest in the service charts",
+        "mime": "text/markdown"
+      },
+      "id": "1",
+      "references": [],
+      "title": "Add HPA's to all deployments"
+    },
+    {
+      "assignedTo": {
+        "name": "J0hn-B"
+      },
+      "category": "k8s",
+      "creation_time": "2020-09-24T10:04:13.313Z",
+      "description": {
+        "content": "Test a chaos engineering solution",
+        "mime": "text/markdown"
+      },
+      "id": "2",
+      "references": [],
+      "title": "Test Chaos solution"
+    }
+  ],
+  "in-progress": [],
+  "testing": [],
+  "done": []
+}
