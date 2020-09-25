@@ -10,12 +10,9 @@ spec:
   project: k8s-config
   source:
     helm:
-      parameters:
-      - name: prometheusOperator.admissionWebhooks.failurePolicy
-        value: Ignore
       valueFiles:
       - values.yaml
-    path: k8s/k8s-charts/kube-prometheus-stack
+    path: k8s/k8s-charts/kube-prometheus
     repoURL: https://github.com/J0hn-B/eshop.git
     targetRevision: HEAD
   syncPolicy:
