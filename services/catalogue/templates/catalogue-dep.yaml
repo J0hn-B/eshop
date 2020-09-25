@@ -6,7 +6,6 @@ metadata:
   labels:
     name: catalogue
 spec:
-  replicas: 1
   selector:
     matchLabels:
       name: catalogue
