@@ -7,3 +7,14 @@ kubectl port-forward svc/prometheus-grafana  -n prometheus 3000:80
 
 # get Grafana secret
  kubectl get secret  prometheus-grafana -n prometheus -o jsonpath="{.data.admin-password}" | base64 --decode
+
+
+# Create service account
+
+ kubectl create serviceaccount chaos-sa -n chaos-testing
+
+ kubectl create role chaos-role --verb=create,get,list,watch --resource=crds -n chaos-testing
+
+ kubectl create rolebinding chaos-rolebinding --role=chaos-role --serviceaccount=chaos-testing:chaos-sa -n chaos-testing
+
+ kubectl auth can-i get crds -n chaos-testing --as system:serviceaccount:chaos-testing:chaos-sa -n chaos-testing
