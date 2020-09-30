@@ -25,6 +25,3 @@ echo -e "${LBLUE}Checking app deployments.... :)${NC}\n"
 kubectl wait --for=condition=Available --timeout=600s deploy front-end  -n eshop
 kubectl wait --for=condition=Available --timeout=600s deploy catalogue  -n eshop
 echo -e "${LBLUE}Application is getting ready, check ArgoCD UI or Dashboard for progress ;))${NC}\n"
-
-# Create custom resources for Chaos-Mesh
-curl -sSL https://mirrors.chaos-mesh.org/v1.0.0/crd.yaml | kubectl apply -f -

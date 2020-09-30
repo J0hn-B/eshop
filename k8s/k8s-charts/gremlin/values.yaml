@@ -1,0 +1,44 @@
+# Default values for gremlin.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: gremlin/gremlin
+  tag: latest
+  pullPolicy: Always
+
+chaoimage:
+  repository: gremlin/chao
+  tag: latest
+  pullPolicy: Always
+
+nameOverride: ""
+fullnameOverride: ""
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+gremlin:
+  apparmor: ""
+  teamID: ""                    # DEPRECATED: moved to gremlin.secret.teamID
+  clusterID: ""                 # DEPRECATED: moved to gremlin.secret.clusterID
+  hostPID: false
+  hostNetwork: false
+  installK8sClient: true
+  client:
+    tags: ""
+  secret: {}
+    # Gremlin supports both `certificate` and `secret` types
+    # # By default, Gremlin will not manage secret values
+    # # To manage secrets with helm, uncomment the following
+    # NOTE: `certificate`+`key` OR `secret` is required, not both. `type` dictates which will be used
+     type: secret
+    # managed: true
+     teamID: gremlin-secret
+    # clusterID: my-cluster-id
+    # certificate: -----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----
+    # key: -----BEGIN EC PRIVATE KEY-----...-----END EC PRIVATE KEY-----
+    # teamSecret: 5ec4e75e-c4e7-5ec4-e75e-c4e75ec4e75e
