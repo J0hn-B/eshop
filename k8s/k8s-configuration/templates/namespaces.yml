@@ -8,9 +8,3 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: metallb
-
----
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: chaos-testing
