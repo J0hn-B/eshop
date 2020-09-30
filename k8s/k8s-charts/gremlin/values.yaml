@@ -30,7 +30,7 @@ gremlin:
   installK8sClient: true
   client:
     tags: ""
-  secret: gremlin-secret
+  secret: {}
     # Gremlin supports both `certificate` and `secret` types
     # # By default, Gremlin will not manage secret values
     # # To manage secrets with helm, uncomment the following
