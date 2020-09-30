@@ -35,7 +35,7 @@ gremlin:
     # # By default, Gremlin will not manage secret values
     # # To manage secrets with helm, uncomment the following
     # NOTE: `certificate`+`key` OR `secret` is required, not both. `type` dictates which will be used
-    # type: certificate
+     type: secret
     # managed: true
     # teamID: 1d1d1d1d-1d1d-1d1d-1d1d-1d1d1d1d1d1d
     # clusterID: my-cluster-id
