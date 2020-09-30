@@ -30,14 +30,14 @@ gremlin:
   installK8sClient: true
   client:
     tags: ""
-  secret: {}
+  secret: gremlin-secret
     # Gremlin supports both `certificate` and `secret` types
     # # By default, Gremlin will not manage secret values
     # # To manage secrets with helm, uncomment the following
     # NOTE: `certificate`+`key` OR `secret` is required, not both. `type` dictates which will be used
-     type: secret
+    # type: certificate
     # managed: true
-     teamID: gremlin-secret
+    # teamID: 1d1d1d1d-1d1d-1d1d-1d1d-1d1d1d1d1d1d
     # clusterID: my-cluster-id
     # certificate: -----BEGIN CERTIFICATE-----...-----END CERTIFICATE-----
     # key: -----BEGIN EC PRIVATE KEY-----...-----END EC PRIVATE KEY-----
