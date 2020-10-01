@@ -1,7 +1,7 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: prometheus
+  name: chaos-testing
 
 ---
 kind: Namespace
@@ -10,8 +10,3 @@ metadata:
   name: metallb
 
 ---
----
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: gremlin
