@@ -11,18 +11,18 @@ export let options = {
 };
 
 export default () => {
-    let res = http.get(`http://localhost:42659/index.html`);
+    let res = http.get(`http://localhost:45403/index.html`);
     check(res, { 'status was 200': r => r.status == 200 });
     check(res, { 'url is http://localhost:42659/index.html': r => r.url == 'http://localhost:42659/index.html' });
 
     //console.log('url is ' + String(res.url));
 
-    let wel = http.get(`http://localhost:42659/category.html?tags=large`);
+    let wel = http.get(`http://localhost:45403/category.html?tags=large`);
     check(wel, { 'status was 200': w => w.status == 200 });
     check(wel, { 'url is http://localhost:42659/category.html?tags=large': w => w.url == 'http://localhost:42659/category.html?tags=large' });
     //console.log('url is ' + String(wel.url));
 
-    let edit = http.get(`http://localhost:42659/category.html`);
+    let edit = http.get(`http://localhost:45403/category.html`);
     check(edit, { 'status was 200': e => e.status == 200 });
     check(edit, { 'url is http://localhost:42659/category.html': w => w.url == 'http://localhost:42659/category.html' });
     //console.log('url is ' + String(edit.url));
