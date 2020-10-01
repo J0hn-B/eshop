@@ -15,7 +15,7 @@ spec:
       name: memory
       target:
         type: AverageValue
-        averageValue: 600Mi
+        averageValue: 800Mi
   - type: Resource
     resource:
       name: cpu
