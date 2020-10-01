@@ -3,6 +3,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: front-end
+  labels:
+    name: front-end
+    kube-monkey/enabled: enabled
+    kube-monkey/identifier: monkey-victim
+    kube-monkey/mtbf: '2'
+    kube-monkey/kill-mode: "fixed"
+    kube-monkey/kill-value: '1'
 spec:
   selector:
     matchLabels:
@@ -11,6 +18,11 @@ spec:
     metadata:
       labels:
         name: front-end
+        kube-monkey/enabled: enabled
+        kube-monkey/identifier: monkey-victim
+        kube-monkey/mtbf: '2'
+        kube-monkey/kill-mode: "fixed"
+        kube-monkey/kill-value: '1'       
     spec:
       containers:
       - name: front-end
