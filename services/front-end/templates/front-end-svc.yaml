@@ -10,6 +10,8 @@ spec:
   ports:
   - port: 80
     targetPort: 8079
+    {{- if eq .Values.spec.type "LoadBalancer" }}
     nodePort: 30001
+    {{- end }}
   selector:
     name: front-end
