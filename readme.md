@@ -2,7 +2,6 @@
 
 The app: <https://microservices-demo.github.io/>  
 
-> [!TIP]
 > Tested with Kind, an average of 16Gb of RAM required.
 
 Architecture explained:  
