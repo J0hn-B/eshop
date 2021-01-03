@@ -1,7 +1,9 @@
 # GitOps K8s sample application deployment with ArgoCD
 
 The app: <https://microservices-demo.github.io/>  
-Tested with Kind, an average of 16Gb of RAM required.
+
+> [!TIP]
+> Tested with Kind, an average of 16Gb of RAM required.
 
 Architecture explained:  
 
