@@ -19,6 +19,6 @@ jobs:
 
       - name: Install ArgoCD
         run: |
-          cd /scripts
+          cd scripts
           chmod +x argocd_install.sh
           ./argocd_install.sh
