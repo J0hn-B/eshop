@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
-      - name: install Kind
+      - name: Install Kind
         run: |
           curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.9.0/kind-linux-amd64
           chmod +x ./kind
@@ -16,3 +16,8 @@ jobs:
       - name: Create cluster
         run: |
           kind create cluster
+
+      - name: Install ArgoCD
+        run: |
+          chmod +x argocd_install.sh
+          ./argocd_install.sh
