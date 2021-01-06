@@ -19,9 +19,9 @@ jobs:
 
       - name: Install ArgoCD
         run: |
-          cd scripts
-          chmod +x argocd_install.sh
-          ./argocd_install.sh
+          kubectl create namespace argocd
+          kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml;
+          kubectl wait --for=condition=Available --timeout=360s deploy/argocd-server -n argocd
 
       - name: Bootstrap the cluster (prepare the cluster for the application)
         run: |
