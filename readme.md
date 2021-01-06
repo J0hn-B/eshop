@@ -28,7 +28,7 @@ Architecture explained:
 
 From a second terminal: `cd /eshop/k8s` --> `kubectl apply -f argo_config`
 
-Check your ArgoCD web UI, click **sync** in the k8s-cluster-management application (you may need to refresh your browser)  
+Check your ArgoCD web UI, click **sync** in the k8s-bootstrap application (you may need to refresh your browser)  
 
 ![bootstrap](images/bootstrap.png)
 

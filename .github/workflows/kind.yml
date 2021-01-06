@@ -3,7 +3,7 @@ name: Test with Kind
 on: [push]
 
 jobs:
-  build:
+  prepare_environment:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -22,3 +22,13 @@ jobs:
           cd scripts
           chmod +x argocd_install.sh
           ./argocd_install.sh
+
+      - name: Bootstrap the cluster (prepare the cluster for the application)
+        run: |
+          cd k8s
+          kubectl apply -f argo_config
+
+      - name: Deploy the Application
+        run: |
+          cd app
+          kubectl apply -f argo_config
