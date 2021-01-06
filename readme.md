@@ -42,3 +42,5 @@ In ArgoCD documetation this is described as "App of Apps" pattern
 
 `cd ~/eshop/app` --> `kubectl apply -f argo_config`  
 Check your ArgoCD web UI, click **sync** in the **app-eshop** application (you may need to refresh your browser)
+
+> Check the github action in .github/workflows/kind.yml.
