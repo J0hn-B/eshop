@@ -1,0 +1,19 @@
+name: Test with Kind
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: install k3s
+        run: |
+          curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.9.0/kind-linux-amd64
+          chmod +x ./kind
+
+      - name: Deploy app
+        run: |
+          kubectl cluster-info
+          kubectl create namespace drupal
