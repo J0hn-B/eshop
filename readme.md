@@ -1,5 +1,7 @@
 # GitOps K8s sample application deployment with ArgoCD
 
+![Test with Kind](https://github.com/J0hn-B/eshop/workflows/Test%20with%20Kind/badge.svg)
+
 The app: <https://microservices-demo.github.io/>  
 
 > Tested with Kind, an average of 16Gb of RAM required.
