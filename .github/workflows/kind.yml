@@ -3,7 +3,7 @@ name: Test with Kind
 on: [push]
 
 jobs:
-  prepare_environment:
+  deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
