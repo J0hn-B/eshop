@@ -8,7 +8,7 @@ The app: <https://microservices-demo.github.io/>
 
 Architecture explained:  
 
-- The application consists of 10 microservices. Each microservice is deployed with each own Helm chart.
+- The application consists of 10 microservices. Each microservice is deployed with its own Helm chart.
 - In a real world scenario, each microservice (code, Dockerfile, Helm Chart, etc..) lives in each own github repo.
 - For simplicity in this demo, all application microservices charts are under the folder `services`
 
